@@ -1,0 +1,15 @@
+name: Compilar WPF
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet restore Semana04-XS/Semana04-XS.csproj
+      - run: dotnet build Semana04-XS/Semana04-XS.csproj --configuration Release --no-restore
