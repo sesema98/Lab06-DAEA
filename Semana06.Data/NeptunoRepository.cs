@@ -29,7 +29,7 @@ public sealed class NeptunoRepository : INeptunoRepository
             parameters?.Invoke(command);
 
             using var adapter = new SqlDataAdapter(command);
-            var dataSet = new DataSet();
+            using var dataSet = new DataSet();
             adapter.Fill(dataSet);
 
             return dataSet.Tables[0].AsEnumerable().Select(map).ToList();

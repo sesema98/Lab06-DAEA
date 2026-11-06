@@ -92,6 +92,7 @@ public partial class MainViewModel : ObservableObject
 
     private async Task RunAsync(Func<Task> action)
     {
+        if (IsBusy) return;
         IsBusy = true;
         try { await action(); }
         catch (Exception ex) { StatusMessage = $"Error: {ex.Message}"; }

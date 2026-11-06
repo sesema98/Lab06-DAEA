@@ -66,3 +66,8 @@ Las operaciones de escritura no usan modo desconectado porque deben ejecutarse c
 La interfaz contiene pestañas para productos, categorías, proveedores, pedidos y reporte por fechas. Cada pantalla está enlazada al `MainViewModel`, que coordina los comandos, validaciones, operaciones de escritura y actualización de las tablas.
 
 La carga inicial de datos y los botones de la interfaz usan `async/await` de punta a punta, sin `.Result` ni `.Wait()`, para evitar que la ventana se bloquee durante las operaciones con la base de datos.
+
+## Validación de la entrega
+Compilar: dotnet build Semana04-XS/Semana04-XS.csproj -p:UseSharedCompilation=false
+Verificar SQL: sqlcmd -S "(localdb)\MSSQLLocalDB" -E -b -i database/04-VerificarLab06.sql
+La prueba revierte los registros creados. El script inicial incluye datos de muestra para el laboratorio.

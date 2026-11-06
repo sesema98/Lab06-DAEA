@@ -1,0 +1,24 @@
+Changed database context to 'NeptunoDB'.
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(0 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+CORRECTO: CRUD de las cuatro entidades, persistencia de bajas logicas, reporte inclusivo y exclusion de pedidos inactivos. Transaccion revertida.
